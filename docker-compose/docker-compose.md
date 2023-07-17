@@ -55,3 +55,26 @@ volumes:
 |     lancer les services     | ```docker start``` + nom ou id du container |
 |    stopper les services     |              ```docker stop```              |
 |     lister les services     |    ```docker ps -a``` ou ```docker ps```    |
+
+## Etapes
+
+Etapes à suivres pour construire un `docker-compose.yaml`
+
+```yaml
+version : '3.9'
+services :
+  apache :
+    image : httpd:latest
+    container_name : my-apache-app
+    ports :
+      - '8080:80'
+    volumes :
+      - ./website:/usr/local/apache2/htdocs
+```
+
+### Bénéfices
+
+Une commande Docker `run` peut rapidement devenir longue quand on fait références a des
+volumes des variables d'environnement, des mots de passe, etc.
+Ces commandes peuvent être utilisées plusieurs fois par jour, ce qui peut être fastidieux.
+
