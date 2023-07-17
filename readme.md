@@ -40,6 +40,7 @@
 
 [//]: # (- docker start `3 fisrt chars of containers id`)
 
+[Docker compose course](./docker-compose/docker-compose.md)
 ## Manipuler les containers
 
 Un container est un simple (ou un ensemble) de processus au niveau du system.
